@@ -1,0 +1,1885 @@
+/* ==========================================================================
+   Theme Name: Car Sales & Rental Theme
+   Theme Version: 1.0
+   Author: Your Name
+   Description: Theme for car sales and rental with a hero section slideshow.
+   ========================================================================== */
+
+/* ================================
+   Reset and Base Styles
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+h2.pg-title {
+    font-family: "Faster One", cursive;
+    color: black;
+}
+
+/* ================================
+   Header Styles
+   ================================ */
+
+.header-row1 {
+    background-color: #ffffff; /* White background */
+    padding: 15px 0; /* Increase padding for better spacing */
+    text-align: center; /* Center the content */
+}
+
+.header-info {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center items horizontally */
+}
+
+.header-info li {
+    margin: 0 20px; /* Increase space between items */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    font-size: 16px; /* Slightly larger font size */
+    color: #333; /* Text color */
+}
+
+.header-info i {
+    margin-right: 12px; /* Increased space between icon and text */
+    font-size: 18px; /* Larger icon size */
+    color: #f15323; /* Icon color */
+}
+
+.header-row2 {
+    background-color: #f15323; /* Background color */
+    padding: 30px 0; /* Increase padding for better spacing */
+    text-align: center; /* Center the content */
+    color: #fff; /* Text color */
+}
+
+.header-row2 .logo {
+    max-width: 180px; /* Slightly larger logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.header-row2 .theme-name {
+    margin: 15px 0; /* Margin around the title */
+    font-size: 30px; /* Larger font size */
+    font-family: 'Faster One', cursive; /* Use Faster One font */
+}
+
+.header-row2 .tagline {
+    font-size: 18px; /* Larger font size */
+    margin-top: 10px; /* Margin for spacing */
+}
+
+/* ================================
+   Navbar Styles
+   ================================ */
+
+.navbar {
+    background-color: #000; /* Black background for navbar */
+    padding: 0.5rem 1rem; /* Padding around the navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for subtle depth */
+}
+
+.navbar-brand .logo {
+    max-width: 150px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* ================================
+   Navbar Toggler Styles
+   ================================ */
+
+.navbar-toggler {
+    border: 2px solid #f15323; /* Border color for better visibility */
+    border-radius: 50%; /* Round button */
+    background-color: #000; /* Background color of the button */
+    padding: 10px; /* Padding around the button */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    outline: none; /* Remove default outline */
+    position: relative; /* Relative positioning for the icon */
+}
+
+/* Customize the icon using a background-image with SVG */
+.navbar-toggler-icon {
+    display: block; /* Ensure it’s block-level for proper sizing */
+    width: 24px; /* Width of the icon */
+    height: 24px; /* Height of the icon */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M3 12h18m-18 6h18M3 6h18" stroke="%23f15323" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /%3E%3C/svg%3E'); /* Custom SVG icon */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: center; /* Center the icon */
+    background-size: 18px 18px; /* Size of the icon */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar-toggler:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Outline effect on focus */
+}
+
+.navbar-toggler:active {
+    background-color: #f15323; /* Change background color on click */
+    border-color: #f15323; /* Change border color on click */
+}
+
+
+.navbar-nav .nav-link {
+    color: #fff; /* White text color */
+    padding: 0.75rem 1.25rem; /* Slightly larger padding */
+    font-size: 1rem; /* Larger font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 0.5px; /* Slight letter spacing */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effect */
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f15323; /* Change text color on hover */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+.navbar-nav .nav-link::after {
+    content: ""; /* Empty content for pseudo-element */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+    height: 2px; /* Height of the underline */
+    background-color: #f15323; /* Underline color */
+    transform: scaleX(0); /* Initial scale of underline */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1); /* Scale underline to full width on hover */
+}
+
+.navbar-nav .nav-item {
+    margin: 0 15px; /* Margin between nav items */
+}
+
+/* ================================
+   Hero Section Styles
+   ================================ */
+
+#hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #333; /* Adding background color for better contrast */
+}
+
+.hero-slider {
+    width: 100%;
+    height: 100%; /* Ensure slider takes full height of the section */
+    position: relative;
+}
+
+.slide {
+    position: relative;
+    height: 100%; /* Ensure each slide takes full height */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+}
+
+/* Adjust the image styling to create a more dynamic look */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+    display: block;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions for zoom and fade effect */
+}
+
+/* Add a zoom-in effect on hover */
+.slide:hover img {
+    transform: scale(1.1); /* Slightly stronger zoom effect */
+}
+
+/* Caption styling */
+.caption {
+    position: absolute;
+    bottom: 30px; /* Adjusted bottom position for better spacing */
+    left: 30px; /* Adjusted left position */
+    color: #fff;
+    font-size: 28px; /* Increased font size for better readability */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for caption */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Add hover effect to caption */
+.slide:hover .caption {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+/* ================================
+   Slick Slider Dots Styles
+   ================================ */
+
+.slick-dots {
+    position: absolute;
+    bottom: 20px; /* Position dots closer to the bottom */
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 15px; /* Increased space between dots */
+}
+
+.slick-dots button {
+    background-color: #f15323;
+    border-radius: 50%;
+    width: 20px; /* Increased dot size */
+    height: 20px; /* Increased dot size */
+    border: none;
+    outline: none;
+    padding: 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slick-dots .slick-active button {
+    background-color: #fff; /* Lighter color for active dot */
+    width: 25px; /* Larger active dot */
+    height: 25px; /* Larger active dot */
+    transform: scale(1.2); /* Slightly larger active dot */
+}
+.slick-dotted.slick-slider{margin-bottom: 0px}
+/* ================================
+   Choose Car Section Styles
+   ================================ */
+
+.choose-car {
+    background-color: #f15323; /* Background color */
+    color: #fff; /* Text color */
+    padding: 40px 0; /* Padding top and bottom */
+    text-align: center; /* Center-align text */
+}
+
+.choose-car h2 {
+    font-size: 28px; /* Font size for the title */
+    margin-bottom: 15px; /* Margin below the title */
+}
+
+.choose-car p {
+    font-size: 16px; /* Font size for the description */
+    margin-bottom: 30px; /* Margin below the description */
+}
+
+.choose-car .form-row {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center items horizontally */
+    gap: 15px; /* Space between items */
+}
+
+.choose-car .form-group {
+    flex: 1; /* Allow form groups to take up equal space */
+    margin-bottom: 20px; /* Margin below each form group */
+}
+
+.choose-car .form-control {
+    border-radius: 5px; /* Rounded corners for the fields */
+    border: 1px solid #ddd; /* Border color */
+    padding: 10px; /* Padding inside the fields */
+    font-size: 16px; /* Font size inside the fields */
+}
+
+.choose-car button {
+    background-color: #fff; /* Button background color */
+    color: #f15323; /* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.choose-car button:hover {
+    background-color: #eaeaea; /* Button background color on hover */
+}
+
+/* ================================
+   Why You Choose Us Section Styles
+   ================================ */
+
+.why-choose-us-section {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Text color */
+    padding: 60px 20px; /* Padding for the section, adjusted for small screens */
+    text-align: center; /* Center align all text */
+}
+
+.why-choose-us-section h2 {
+    font-size: 2rem; /* Font size for responsiveness */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.why-choose-us-section p {
+    font-size: 1rem; /* Font size for responsiveness */
+    margin-bottom: 40px; /* Space below the paragraph */
+    max-width: 600px; /* Max width for better readability */
+    margin-left: auto; /* Center align */
+    margin-right: auto; /* Center align */
+}
+
+.reasons {
+    display: flex; /* Flexbox for reasons layout */
+    flex-direction: column; /* Stack items vertically on small screens */
+    gap: 20px; /* Space between reason blocks */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: center; /* Center items */
+}
+
+.reason {
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding for the reason block */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+    flex: 1; /* Allow flex growth */
+    max-width: 300px; /* Max width for reason blocks */
+    margin: 0 auto; /* Center align on small screens */
+}
+
+.reason i {
+    font-size: 3rem; /* Icon size adjusted for responsiveness */
+    color: #f15323; /* Icon color */
+    margin-bottom: 10px; /* Space below the icon */
+}
+
+.reason h3 {
+    font-size: 1.5rem; /* Heading size adjusted for responsiveness */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.reason p {
+    font-size: 1rem; /* Paragraph size adjusted for responsiveness */
+    color: #666; /* Lighter text color */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .reasons {
+        flex-direction: row; /* Display reasons side by side on larger screens */
+    }
+}
+
+/* ================================
+   Services Page Styles
+   ================================ */
+#ser-our-service{text-align: center;}
+.our-service-section {
+    background-color: #fff; /* White background */
+    color: #333; /* Text color */
+    padding: 60px 0; /* Padding for the section */
+    text-align: center; /* Center align all text */
+}
+
+.our-service-section h2 {
+    font-size: 36px; /* Increased font size */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: bold; /* Bold heading */
+    color: #f15323; /* Main theme color for heading */
+}
+
+.our-service-section p {
+    font-size: 18px; /* Font size */
+    margin-bottom: 40px; /* Space below the paragraph */
+    max-width: 800px; /* Max width for better readability */
+    margin-left: auto; /* Center align */
+    margin-right: auto; /* Center align */
+    color: #555; /* Slightly lighter text color */
+}
+
+.services {
+    display: flex; /* Flexbox for services layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center align services */
+    gap: 30px; /* Space between service blocks */
+}
+
+.services-row {
+    display: flex; /* Flexbox for row layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center align services in row */
+    gap: 30px; /* Space between service blocks in row */
+    margin-bottom: 30px; /* Space below each row */
+}
+
+.service {
+    text-align: center; /* Center align text */
+    max-width: 320px; /* Increased max width for each service */
+    flex: 1; /* Allow flexible width */
+    border-radius: 15px; /* Rounded corners for the service block */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0 auto; /* Center the service block */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Lift the service block slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Enhanced shadow */
+    background-color: #f9f9f9; /* Light background on hover */
+}
+
+.service-image {
+    border-radius: 15px 15px 0 0; /* Rounded corners for the top of the image */
+    overflow: hidden; /* Hide overflow for rounded corners */
+    position: relative; /* Position for overlay effects */
+}
+
+.service-image img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px 15px 0 0; /* Rounded corners for the image */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+}
+
+.service:hover .service-image img {
+    transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+.service-text {
+    padding: 20px; /* Increased padding around text */
+    position: relative; /* Position for absolute positioning of the icon */
+}
+
+.service-icon {
+    font-size: 48px; /* Larger icon size */
+    color: #f15323; /* Icon color */
+    margin-bottom: 15px; /* Space below the icon */
+    display: block; /* Block display for icon */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+.service:hover .service-icon {
+    color: #333; /* Darker icon color on hover */
+}
+
+.service-text h3 {
+    font-size: 26px; /* Larger heading size */
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: bold; /* Bold heading text */
+}
+
+.service-text p {
+    font-size: 16px; /* Paragraph size */
+    margin-bottom: 20px; /* Space below the paragraph */
+    color: #666; /* Lighter text color */
+}
+
+.service-rental {
+    background-color: #e0f7fa; /* Light cyan background */
+}
+
+.service-maintenance {
+    background-color: #e8f5e9; /* Light green background */
+}
+
+.service-insurance {
+    background-color: #fce4ec; /* Light pink background */
+}
+
+.service-financing {
+    background-color: #fff3e0; /* Light orange background */
+}
+
+.service-warranty {
+    background-color: #d1c4e9; /* Light purple background */
+}
+
+.service-support {
+    background-color: #bbdefb; /* Light blue background */
+}
+
+.btn-view-all {
+    background-color: #f15323; /* Main theme color */
+    color: #fff; /* White text color */
+    padding: 12px 24px; /* Increased padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 40px; /* Space above the button */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Align with other inline elements */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+    font-size: 18px; /* Font size for button */
+}
+
+.btn-view-all:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .services-row {
+        gap: 20px; /* Reduce gap between services in smaller screens */
+    }
+
+    .service {
+        max-width: 100%; /* Full width for each service block */
+    }
+}
+
+@media (max-width: 576px) {
+    .our-service-section h2 {
+        font-size: 28px; /* Smaller heading size */
+    }
+
+    .our-service-section p {
+        font-size: 16px; /* Smaller paragraph size */
+    }
+
+    .service-icon {
+        font-size: 36px; /* Smaller icon size */
+    }
+
+    .service-text h3 {
+        font-size: 22px; /* Smaller heading size */
+    }
+
+    .service-text p {
+        font-size: 14px; /* Smaller paragraph size */
+    }
+}
+
+
+/* ================================
+   Latest News Section Styles
+   ================================ */
+
+.latest-news-section {
+    padding: 60px 0; /* Padding for the section */
+    background-color: #f4f4f4; /* Background color */
+    text-align: center; /* Center align text */
+}
+
+.latest-news-section h2 {
+    font-size: 32px; /* Font size */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.latest-news-section p {
+    font-size: 18px; /* Font size */
+    margin-bottom: 40px; /* Space below the paragraph */
+    max-width: 800px; /* Max width for better readability */
+    margin-left: auto; /* Center align */
+    margin-right: auto; /* Center align */
+}
+
+/* ================================
+   Customer Testimonials Section Styles
+   ================================ */
+#customer-testimonials {
+    background-color: #ffffff;
+    padding: 5rem 0;
+}
+
+.testimonial-slider {
+    position: relative;
+}
+
+.testimonial-item {
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ================================
+   Our Pricing Plans Section Styles
+   ================================ */
+#pricing-plans {
+    background-color: #f9f9f9;
+    padding: 5rem 0;
+}
+
+.pricing-plan {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.pricing-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.pricing-price {
+    font-size: 1.3rem;
+    color: #f15323;
+    margin: 1rem 0;
+}
+
+.pricing-features {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pricing-features li {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #f15323;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e64518;
+}
+
+
+.news-slick {
+    position: relative; /* Relative positioning for arrows */
+}
+
+.news-item {
+    padding: 20px; /* Padding inside each news item */
+    background-color: #fff; /* White background for news items */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+    height: 100%; /* Full height for equal item height */
+    display: flex; /* Flexbox to center content */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Space between image and content */
+    margin-bottom: 10px; /* Space below each news item */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.news-item:hover {
+    transform: translateY(-10px); /* Lift the news item on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add more shadow on hover */
+}
+
+.news-item img {
+    width: 100%; /* Full width images */
+    height: auto; /* Auto height to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space below the image */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.news-item:hover img {
+    opacity: 0.8; /* Slightly fade image on hover */
+}
+
+.news-content {
+    padding: 15px; /* Padding inside the news content */
+}
+
+.news-content h3 {
+    font-size: 24px; /* Font size for titles */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.news-content p {
+    font-size: 16px; /* Font size for paragraphs */
+    color: #555; /* Darker text color for readability */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.btn-view-all {
+    display: inline-block; /* Button display */
+    background-color: #f15323; /* Button background color */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effects */
+    margin-top: 40px; /* Space above the button */
+}
+
+.btn-view-all:hover {
+    background-color: #333; /* Dark background on hover */
+    color: #fff; /* White text color on hover */
+}
+
+/* Slick Slider Arrows */
+.news-slick .slick-prev, .news-slick .slick-next {
+    background: transparent; /* No background */
+    color: #f15323; /* Icon color */
+    border: none; /* Remove border */
+    z-index: 1; /* Ensure arrows are on top */
+}
+
+.news-slick .slick-prev {
+    left: 10px; /* Position left */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.news-slick .slick-next {
+    right: 10px; /* Position right */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.news-slick .slick-prev:before, .news-slick .slick-next:before {
+    font-size: 24px; /* Icon size */
+    color: #f15323; /* Color of the arrows */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .news-item {
+        margin-bottom: 10px; /* Adjust space between news items */
+    }
+}
+
+@media (max-width: 600px) {
+    .news-item {
+        margin-bottom: 10px; /* Adjust space between news items */
+    }
+}
+
+/* ================================
+   Comments Section Styles
+   ================================ */
+
+.comments-section {
+    background-color: #f1f1f1; /* Light gray background for contrast */
+    padding: 60px 0; /* Padding for the section */
+    position: relative; /* Positioning context for navigation buttons */
+}
+
+.comments-section h2 {
+    text-align: center; /* Center align heading */
+    font-size: 36px; /* Larger font size for the heading */
+    margin-bottom: 40px; /* Space below the heading */
+    color: #333; /* Dark text color */
+    font-weight: 700; /* Bold heading */
+}
+
+.comments-slider {
+    display: flex; /* Flexbox layout for comments */
+    gap: 30px; /* Space between comments */
+    justify-content: center; /* Center align comments */
+    overflow: hidden; /* Hide overflow */
+}
+
+.comment {
+    background-color: #fff; /* White background for comments */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* Hide overflow */
+    width: 320px; /* Fixed width for comments */
+    padding: 20px; /* Padding inside comment block */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.comment:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.comment-avatar {
+    margin-bottom: 15px; /* Space below avatar */
+    display: flex; /* Flexbox layout for avatar container */
+    justify-content: center; /* Center align avatar */
+}
+
+.comment-avatar img {
+    border-radius: 50%; /* Circular avatar */
+    width: 100px; /* Avatar size */
+    height: 100px; /* Avatar size */
+    object-fit: cover; /* Cover image to fill avatar */
+    border: 3px solid #f15323; /* Border around avatar */
+}
+
+.comment-text p {
+    font-size: 16px; /* Font size for comment text */
+    margin-bottom: 10px; /* Space below comment text */
+    color: #555; /* Darker gray for text */
+    font-style: italic; /* Italicize comment text */
+}
+
+.comment-text h4 {
+    font-size: 18px; /* Font size for client name */
+    margin-bottom: 5px; /* Space below client name */
+    color: #333; /* Dark text color */
+    font-weight: 600; /* Bold client name */
+}
+
+.comment-text span {
+    font-size: 14px; /* Font size for client role */
+    color: #777; /* Light gray color for client role */
+}
+
+/* Slick Navigation Arrows */
+.slick-prev,
+.slick-next {
+    background-color: #f15323; /* Background color for the navigation arrows */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Circular buttons */
+    color: #fff; /* White color for the icons */
+    font-size: 24px; /* Font size for icons */
+    width: 40px; /* Width of the buttons */
+    height: 40px; /* Height of the buttons */
+    display: flex; /* Flexbox for center alignment */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically with transform */
+    z-index: 1; /* Ensure buttons are on top */
+    cursor: pointer; /* Change cursor to pointer (hand) */
+}
+
+.slick-prev {
+    left: 10px; /* Position the previous button to the left */
+}
+
+.slick-next {
+    right: 10px; /* Position the next button to the right */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #e94e77; /* Slightly darker background on hover */
+}
+
+/* Footer Logo */
+.footer-logo {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Footer Links */
+.footer-links .list-inline-item {
+    margin: 0 10px;
+}
+
+.footer-links a {
+    color: #f15323;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Hover effect for links */
+.footer-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #f15323;
+    text-decoration: underline;
+}
+
+/* Footer Social Icons */
+.footer-social a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+}
+
+/* Hover effect for social icons */
+.footer-social a:hover {
+    color: #f15323;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #f15323;
+}
+
+/* Footer Address */
+address {
+    font-style: normal;
+    line-height: 1.5;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background-color: #333; /* Dark background for the bottom section */
+    color: #fff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 10px 0; /* Padding */
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #fff; /* White text color */
+    transition: color 0.3s, text-shadow 0.3s; /* Smooth transition for color and text-shadow */
+}
+
+/* Hover effect for copyright text */
+.footer-bottom p:hover {
+    color: #f15323; /* Change color on hover */
+}
+
+
+
+/* ==================================================================
+                                about page Styles
+ ========================================================================= */
+/* ================================
+   About Us Section Styles
+   ================================ */
+#about-us {
+    background: linear-gradient(to right, #f9f9f9, #ffffff);
+}
+
+.about-us-section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #222;
+    text-align: left;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+
+.section-description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    padding-left: 2rem;
+}
+
+.about-image img {
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #f15323; /* Updated color */
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d1401b; /* Darker shade on hover */
+}
+
+/* ================================
+   Mission & Vision Section Styles
+   ================================ */
+.mission-vision {
+    background: #f5f5f5;
+    padding: 5rem 0;
+}
+
+.mission-vision .icon {
+    color: #f15323; /* Updated color */
+}
+
+.mission-vision .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-vision .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.mission-vision .card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.mission-vision .card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.mission-vision ul.list-unstyled {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 0;
+    list-style: none;
+}
+
+.mission-vision ul.list-unstyled li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mission-vision ul.list-unstyled li:hover {
+    color: #f15323; /* Updated color */
+    transform: translateX(10px);
+}
+
+.mission-vision ul.list-unstyled li i {
+    color: #f15323; /* Updated color */
+    margin-right: 0.75rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.mission-vision ul.list-unstyled li:hover i {
+    color: #e04e1b; /* Slightly darker shade on hover */
+    transform: scale(1.2); /* Slightly larger icon on hover */
+}
+
+/* ================================
+   Meet Our Team Section Styles
+   ================================ */
+#meet-our-team {
+    background: #ffffff;
+    padding: 5rem 0;
+}
+
+#meet-our-team .team-member {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#meet-our-team .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+#meet-our-team .team-member img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f15323; /* Updated color */
+}
+
+#meet-our-team .team-member-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#meet-our-team .team-member-role {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#meet-our-team .team-member-bio {
+    font-size: 1rem;
+    color: #666;
+}
+
+#meet-our-team .social-links {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#meet-our-team .social-links li {
+    margin: 0 0.5rem;
+}
+
+#meet-our-team .social-links a {
+    color: #f15323; /* Updated color */
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#meet-our-team .social-links a:hover {
+    color: #d1401b; /* Darker shade on hover */
+    transform: scale(1.2); /* Slightly larger icon on hover */
+}
+
+/* ================================
+   Meet Our Team Section Styles
+   ================================ */
+#meet-our-team {
+    background: #ffffff;
+    padding: 5rem 0;
+}
+
+#meet-our-team .team-member {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+#meet-our-team .team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+#meet-our-team .team-member img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #f15323; /* Updated border color */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+#meet-our-team .team-member img:hover {
+    transform: scale(1.1);
+}
+
+#meet-our-team .team-member-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+#meet-our-team .team-member-role {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#meet-our-team .team-member-bio {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* ================================
+   Social Links Styles
+   ================================ */
+.social-links {
+    display: flex;
+    justify-content: center; /* Center the social links horizontally */
+    padding: 0;
+    margin: 0;
+    list-style: none; /* Remove default list styles */
+}
+
+.social-links li {
+    margin: 0 1rem; /* Space between icons */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Size of the icon */
+    height: 50px; /* Size of the icon */
+    border-radius: 50%; /* Circular background */
+    background: #fff; /* White background for icons */
+    color: #000; /* Default color for icons */
+    font-size: 1.5rem; /* Icon size */
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Default shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.social-icon:hover {
+    background: #f15323; /* Orange background on hover */
+    color: #fff; /* White color for icons on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* ==================================================================
+                                Services page Styles
+ ========================================================================= */
+
+/* ================================
+   Services Overview Section Styles
+   ================================ */
+#ser-services-overview {
+    background-color: #ffffff;
+    padding: 5rem 0;
+}
+
+.ser-services-overview-section .ser-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.ser-services-overview-section .ser-section-description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.ser-service-item {
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.ser-service-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ser-service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.ser-service-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+/* ================================
+   Featured Services Styles
+   ================================ */
+.ser-featured-services {
+    background-color: #ffffff;
+    padding: 5rem 0;
+}
+
+.ser-section-title {
+    font-family: "Faster One", cursive;
+    color: black;
+    text-shadow: 2px 2px #cccccc;
+    margin-bottom: 3rem;
+}
+
+.ser-featured-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.ser-featured-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ser-featured-icon img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.ser-featured-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.ser-featured-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #f15323;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e64518;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ser-featured-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Customer Testimonials Section Styles */
+#customer-testimonials-section {
+  background-color: #f9f9f9;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.customer-testimonials-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.customer-testimonials-description {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.testimonial-carousel {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-author {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-rating {
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-rating i {
+  color: #f15323;
+}
+
+.testimonial-text {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   Pricing Plans Styles
+   ================================ */
+.ser-pricing-plans {
+    background-color: #dfdfdf;
+    padding: 5rem 0;
+}
+
+.ser-pricing-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #fff;
+    color: #333; /* Improved text color for readability */
+}
+
+.ser-pricing-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.ser-pricing-card.ser-highlighted {
+    background: linear-gradient(135deg, #f15323 0%, #f17753 100%);
+    color: #fff;
+}
+
+.ser-pricing-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: inherit; /* Inherit color from parent */
+}
+
+.ser-pricing-price {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: inherit; /* Inherit color from parent */
+}
+
+.ser-pricing-price span {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.ser-pricing-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    color: inherit; /* Inherit color from parent */
+}
+
+.ser-pricing-features li {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.btn-primary {
+    background-color: #f15323;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary.ser-highlighted-btn {
+    background-color: #fff;
+    color: #f15323;
+    border: 2px solid #f15323;
+}
+
+.btn-primary.ser-highlighted-btn:hover {
+    background-color: #f15323;
+    color: #fff;
+}
+
+/* FAQ Section Styles */
+#faq-section {
+  background-color: #ffffff;
+  padding: 5rem 0;
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.faq-description {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.accordion .card {
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.accordion .card-header {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.accordion .btn-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  font-weight: 600;
+}
+
+.accordion .btn-link:hover,
+.accordion .btn-link:focus {
+  text-decoration: none;
+  color: #f15323;
+}
+
+.accordion .collapse {
+  border-top: 1px solid #ddd;
+}
+
+.accordion .card-body {
+  padding: 1rem;
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: #555;
+}
+/* Frequently Asked Questions Section Styles */
+#faq {
+    background-color: #ffffff;
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #f15323;
+}
+
+.accordion-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #f15323;
+    background-color: #ffffff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    font-size: 1rem;
+    color: #666;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+}
+
+/* ==================================================================
+                                cars page Styles
+ ========================================================================= */
+
+/* ================================
+    Car Hero Section Styles
+   ================================ */
+#car-hero-section {
+    position: relative;
+    background: url('../images/car-hero3.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 10rem 0;
+    text-align: center;
+    background-size: cover; /* Ensure the background covers the section */
+    background-position: center; /* Center the background image */
+}
+
+.car-hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better text readability */
+    padding: 5rem 0;
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.car-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add shadow for better readability */
+}
+
+.car-hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+}
+
+.car-hero-btn {
+    background-color: #f15323;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.car-hero-btn:hover {
+    background-color: #e14022;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.car-hero-btn:focus {
+    outline: none;
+}
+/* ================================
+   Featured Cars Section Styles
+   ================================ */
+#featured-cars-section {
+    background-color: #fff;
+    padding: 5rem 0;
+}
+
+.featured-cars-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.featured-cars-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.car-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.car-image {
+    border-bottom: 1px solid #ddd;
+}
+
+.car-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.car-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.car-details {
+    font-size: 1.125rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.car-btn {
+    background-color: #f15323;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.car-btn:hover {
+    background-color: #e14022;
+    transform: scale(1.05);
+}
+
+/* ================================
+   Car Brands Section Styles
+   ================================ */
+#car-brands-section {
+    background-color: #f9f9f9;
+    padding: 5rem 0;
+}
+
+.car-brands-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.car-brands-subtitle {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.brand-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==================================================================
+                                car-details page Styles
+ ========================================================================= */
+#car-details-page {
+    background-color: #fff;
+    padding: 5rem 0;
+}
+
+.car-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.car-description {
+    font-size: 1.125rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.car-specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.125rem;
+    color: #666;
+}
+
+.car-specs li {
+    margin-bottom: 0.5rem;
+}
+
+.car-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #f15323;
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e14022;
+}
+
+/* ==================================================================
+                                contact page Styles
+ ========================================================================= */
+
+/* ================================
+   Contact Section Styles
+   ================================ */
+#contact-section {
+    background-color: #f9f9f9;
+    padding: 5rem 0;
+}
+
+.pg-title {
+    font-family: "Faster One", cursive;
+    color: #f15323;
+    text-shadow: 2px 2px #cccccc;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.form-control {
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #f15323;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e64518;
+}
+
+.card {
+    border-radius: 0.5rem;
+}
+
+.card-body {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   FAQ Page Styles
+   ========================================================================== */
+/* ================================
+   FAQ Section Styles
+   ================================ */
+#faq-section {
+    background-color: #f9f9f9;
+    padding: 5rem 0;
+}
+
+#faq-section .accordion-button {
+    background-color:  #23a1f1;
+    color: #ffffff;
+}
+
+#faq-section .accordion-button.collapsed {
+    background-color: #23a1f1;
+}
+
+#faq-section .accordion-body {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+#faq-section .faq-title {
+    font-family: "Faster One", cursive;
+}
+
+#faq-section .accordion-header h2 {
+    font-family: 'Roboto', sans-serif ;
+    font-weight: 700;
+}

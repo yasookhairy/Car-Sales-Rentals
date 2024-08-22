@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Car Rental & Sales Theme</title>
+    <!-- Font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Faster+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css 4.1.1 from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS 3.0.0 CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Header Row 1 -->
+        <div class="header-row1">
+            <ul class="header-info">
+                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                <li><i class="fa fa-clock"></i> Mon - Sat: 9am - 6pm</li>
+                <li><i class="fa fa-phone"></i> +123 456 7890</li>
+            </ul>
+        </div>
+
+        <!-- Header Row 2 -->
+        <div class="header-row2">
+            <img src="assets/images/car-logo.png" alt="Car Logo" class="logo">
+            <h1 class="theme-name">Car Sales & Rentals</h1>
+            <p class="tagline">Your trusted partner in car sales and rentals.</p>
+        </div>
+
+        <!-- Header Row 3 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/car-logo.png" alt="Car Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cars.html">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+  <!-- Our Service Section -->
+  <section id="ser-our-service" class="py-5">
+    <div class="container">
+      <h2 class="ser-section-title text-center mb-5">Our Service</h2>
+      <div class="row">
+        <div class="col-lg-4 mb-4" data-aos="fade-up">
+          <div class="ser-service-card shadow-lg p-4 rounded">
+            <i class="fa fa-car fa-3x mb-3 ser-service-icon" style="color: #f15323"></i>
+            <h4 class="ser-service-title">Luxury Car Rentals</h4>
+            <p class="ser-service-description">Experience the ultimate luxury with our premium car rentals, featuring the latest models and exceptional service.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="ser-service-card shadow-lg p-4 rounded">
+            <i class="fa fa-wrench fa-3x mb-3 ser-service-icon" style="color: #f15323"></i>
+            <h4 class="ser-service-title">Car Maintenance</h4>
+            <p class="ser-service-description">Keep your vehicle in top condition with our comprehensive car maintenance services, including routine checks and repairs.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="ser-service-card shadow-lg p-4 rounded">
+            <i class="fa fa-handshake fa-3x mb-3 ser-service-icon" style="color: #f15323"></i>
+            <h4 class="ser-service-title">Buy & Sell Cars</h4>
+            <p class="ser-service-description">Looking to buy or sell a car? Our platform offers a seamless experience with competitive pricing and a wide selection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Services Section -->
+  <section id="ser-featured-services" class="ser-featured-services py-5">
+    <div class="container">
+      <h2 class="ser-section-title text-center" data-aos="fade-up">Featured Services</h2>
+      <div class="row">
+        <!-- Featured Service 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-featured-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="ser-featured-icon mb-3">
+              <img src="assets/images/car-luxury.jpeg" alt="Luxury Rentals" class="img-fluid">
+            </div>
+            <h3 class="ser-featured-title">Luxury Rentals</h3>
+            <p class="ser-featured-description">Experience the ultimate comfort and style with our luxury car rentals. Perfect for special occasions and high-end experiences.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Featured Service 2 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-featured-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="ser-featured-icon mb-3">
+              <img src="assets/images/family-vechile.jpeg" alt="Family Vehicles" class="img-fluid">
+            </div>
+            <h3 class="ser-featured-title">Family Vehicles</h3>
+            <p class="ser-featured-description">Our family-friendly vehicles provide space and comfort for your loved ones. Choose from our selection of SUVs and minivans.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Featured Service 3 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-featured-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="ser-featured-icon mb-3">
+              <img src="assets/images/car-economy.jpeg" alt="Economy Cars" class="img-fluid">
+            </div>
+            <h3 class="ser-featured-title">Economy Cars</h3>
+            <p class="ser-featured-description">Get the best value for your money with our economy car rentals. Ideal for daily commuting and budget-conscious travelers.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Featured Service 4 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-featured-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="ser-featured-icon mb-3">
+              <img src="assets/images/car-hero1.png" alt="Commercial Rentals" class="img-fluid">
+            </div>
+            <h3 class="ser-featured-title">Commercial Rentals</h3>
+            <p class="ser-featured-description">Rent commercial vehicles tailored for your business needs. From delivery vans to trucks, we have you covered.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Featured Service 5 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-featured-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="ser-featured-icon mb-3">
+              <img src="assets/images/car-hero1.png" alt="Maintenance Services" class="img-fluid">
+            </div>
+            <h3 class="ser-featured-title">Maintenance Services</h3>
+            <p class="ser-featured-description">Keep your vehicle in top condition with our comprehensive maintenance services. We offer everything from oil changes to inspections.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+        <!-- Featured Service 6 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-featured-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="ser-featured-icon mb-3">
+              <img src="assets/images/car-hero3.png" alt="Car Wash & Detailing" class="img-fluid">
+            </div>
+            <h3 class="ser-featured-title">Car Wash & Detailing</h3>
+            <p class="ser-featured-description">Get your car looking like new with our professional car wash and detailing services. We ensure a thorough and high-quality clean.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Customer Testimonials Section -->
+<section id="customer-testimonials-section" data-aos="fade-up" data-aos-duration="1500">
+  <div class="container">
+    <h2 class="customer-testimonials-title">Customer Testimonials</h2>
+    <p class="customer-testimonials-description">Hear from our satisfied customers about their experiences.</p>
+
+    <div class="testimonial-carousel">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content">
+          <h4 class="testimonial-author">John Doe</h4>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-text">
+            <p>"The service was excellent, and the staff was incredibly friendly. I felt well taken care of and will definitely be coming back!"</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content">
+          <h4 class="testimonial-author">Jane Smith</h4>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-text">
+            <p>"Amazing experience! The doctors are highly professional and the facilities are top-notch. Highly recommended!"</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-item">
+        <div class="testimonial-content">
+          <h4 class="testimonial-author">Mike Johnson</h4>
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="testimonial-text">
+            <p>"I was impressed with the level of care and attention I received. The staff was very attentive and the services were top-notch."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Our Pricing Plans Section -->
+  <section id="ser-pricing-plans" class="ser-pricing-plans py-5">
+    <div class="container">
+      <h2 class="ser-section-title text-center" data-aos="fade-up">Our Pricing Plans</h2>
+      <div class="row">
+        <!-- Pricing Plan 1 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-pricing-card" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="ser-pricing-title">Basic Plan</h3>
+            <p class="ser-pricing-price">$29<span>/month</span></p>
+            <ul class="ser-pricing-features">
+              <li>1 Car Model</li>
+              <li>24/7 Support</li>
+              <li>Basic Coverage</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Choose Plan</a>
+          </div>
+        </div>
+        <!-- Pricing Plan 2 (Highlighted) -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-pricing-card ser-highlighted" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="ser-pricing-title">Standard Plan</h3>
+            <p class="ser-pricing-price">$49<span>/month</span></p>
+            <ul class="ser-pricing-features">
+              <li>3 Car Models</li>
+              <li>24/7 Support</li>
+              <li>Comprehensive Coverage</li>
+            </ul>
+            <a href="#" class="btn btn-primary ser-highlighted-btn">Choose Plan</a>
+          </div>
+        </div>
+        <!-- Pricing Plan 3 -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="ser-pricing-card" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="ser-pricing-title">Premium Plan</h3>
+            <p class="ser-pricing-price">$79<span>/month</span></p>
+            <ul class="ser-pricing-features">
+              <li>Unlimited Car Models</li>
+              <li>24/7 Support</li>
+              <li>Premium Coverage</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Frequently Asked Questions Section -->
+<section id="faq" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is your refund policy?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Our refund policy allows you to request a refund within 30 days of your purchase. Please contact our support team for more details.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How do I book a car rental?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        To book a car rental, simply visit our booking page, select your car, choose your rental dates, and complete the booking form.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What types of cars are available?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We offer a wide range of cars, including luxury vehicles, family cars, and economy options. You can view our full selection on our website.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white">
+        <div class="container py-5 text-center">
+            <!-- Footer Logo -->
+            <img src="assets/images/car-logo.png" alt="Logo" class="footer-logo img-fluid mb-4">
+            <div class="row justify-content-center">
+                <!-- Quick Links -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-inline footer-links text-center">
+                        <li class="list-inline-item"><a href="#">Home</a></li>
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="#">Services</a></li>
+                        <li class="list-inline-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Contact Us</h5>
+                    <address class="text-center">
+                        123 Street Name, City, State, 12345<br>
+                        <a href="mailto:info@mytheme.com" class="text-white">info@mytheme.com</a><br>
+                        <a href="tel:+1234567890" class="text-white">+1 234 567 890</a>
+                    </address>
+                </div>
+                <!-- Social Media Links -->
+                <div class="col-lg-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline footer-social text-center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61556511729852"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61556511729852"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61556511729852"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom text-center py-3">
+            <p class="mb-0">&copy; 2024 My Theme. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- AOS 3.0.0 JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

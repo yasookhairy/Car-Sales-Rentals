@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Car Rental & Sales Theme</title>
+    <!-- Font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Faster+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+    <!-- Font Awesome CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css 4.1.1 from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS 3.0.0 CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Slick CSS from CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Header Row 1 -->
+        <div class="header-row1">
+            <ul class="header-info">
+                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                <li><i class="fa fa-clock"></i> Mon - Sat: 9am - 6pm</li>
+                <li><i class="fa fa-phone"></i> +123 456 7890</li>
+            </ul>
+        </div>
+
+        <!-- Header Row 2 -->
+        <div class="header-row2">
+            <img src="assets/images/car-logo.png" alt="Car Logo" class="logo">
+            <h1 class="theme-name">Car Sales & Rentals</h1>
+            <p class="tagline">Your trusted partner in car sales and rentals.</p>
+        </div>
+
+        <!-- Header Row 3 -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/car-logo.png" alt="Car Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cars.html">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    
+    <!-- Hero Section with Slideshow -->
+    <section id="hero" class="hero" data-aos="fade-in" data-aos-duration="1500">
+        <div class="hero-slider">
+            <div class="slide" data-aos="fade-up" data-aos-duration="1500">
+                <img src="assets/images/car-hero4.png" alt="Slide 1">
+                <div class="caption">Welcome to Our Car Rental & Sales Theme</div>
+            </div>
+            <div class="slide" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                <img src="assets/images/car-hero2.png" alt="Slide 2">
+                <div class="caption">Find Your Perfect Car Today</div>
+            </div>
+            <div class="slide" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600">
+                <img src="assets/images/car-hero3.png" alt="Slide 3">
+                <div class="caption">Quality Cars at Affordable Prices</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- New Section: Choose Your Car -->
+    <section class="choose-car" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+            <h2>Choose Your Favorite Car Now</h2>
+            <p>Find the best car that suits your needs and preferences. Use the form below to filter your search.</p>
+            <form id="car-search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <select id="car-type" name="car_type" class="form-control">
+                            <option value="">Select Car Type</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="truck">Truck</option>
+                            <option value="coupe">Coupe</option>
+                        </select>
+                    </div>
+                    <div id="car-model-group" class="form-group" style="display:none;">
+                        <select id="car-model" name="car_model" class="form-control">
+                            <option value="">Select Car Model</option>
+                            <!-- Models will be populated based on car type selection -->
+                        </select>
+                    </div>
+                    <div id="year-group" class="form-group" style="display:none;">
+                        <select id="year" name="year" class="form-control">
+                            <option value="">Select Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Why You Choose Us Section -->
+    <section class="why-choose-us-section" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+            <h2>Why You Choose Us</h2>
+            <p>Discover why we are the best choice for your car rental and sales needs. We offer unparalleled service, a wide range of options, and unbeatable prices.</p>
+            <div class="reasons">
+                <div class="reason">
+                    <i class="fas fa-star"></i>
+                    <h3>High Quality</h3>
+                    <p>We provide only the highest quality cars, ensuring a smooth and comfortable ride every time.</p>
+                </div>
+                <div class="reason">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Best Prices</h3>
+                    <p>We offer competitive pricing without compromising on quality or service.</p>
+                </div>
+                <div class="reason">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Exceptional Service</h3>
+                    <p>Our team is dedicated to providing excellent customer service, from booking to return.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Service Section -->
+    <section class="our-service-section" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Explore the wide range of services we offer to make your car rental and purchase experience exceptional.</p>
+
+            <div class="services">
+                <!-- First Row -->
+                <div class="services-row">
+                    <div class="service service-rental" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-image">
+                            <img src="assets/images/serv1.png" alt="Car Rental">
+                        </div>
+                        <div class="service-text">
+                            <i class="fas fa-car service-icon"></i>
+                            <h3>Car Rental</h3>
+                            <p>Choose from a wide variety of cars for rent, suitable for any occasion or budget.</p>
+                        </div>
+                    </div>
+                    <div class="service service-maintenance" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-image">
+                            <img src="assets/images/serv2.png" alt="Maintenance">
+                        </div>
+                        <div class="service-text">
+                            <i class="fas fa-tools service-icon"></i>
+                            <h3>Maintenance</h3>
+                            <p>Our expert mechanics provide top-notch maintenance services to keep your car in perfect condition.</p>
+                        </div>
+                    </div>
+                    <div class="service service-insurance" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-image">
+                            <img src="assets/images/serv3.png" alt="Insurance">
+                        </div>
+                        <div class="service-text">
+                            <i class="fas fa-shield-alt service-icon"></i>
+                            <h3>Insurance</h3>
+                            <p>Get comprehensive insurance coverage for peace of mind on the road.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="services-row">
+                    <div class="service service-financing" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-image">
+                            <img src="assets/images/serv4.png" alt="Financing">
+                        </div>
+                        <div class="service-text">
+                            <i class="fas fa-dollar-sign service-icon"></i>
+                            <h3>Financing</h3>
+                            <p>Flexible financing options to help you drive away in your dream car without breaking the bank.</p>
+                        </div>
+                    </div>
+                    <div class="service service-warranty" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-image">
+                            <img src="assets/images/serv5.png" alt="Warranty">
+                        </div>
+                        <div class="service-text">
+                            <i class="fas fa-file-contract service-icon"></i>
+                            <h3>Warranty</h3>
+                            <p>Extended warranty plans to ensure your car is covered for any unexpected issues.</p>
+                        </div>
+                    </div>
+                    <div class="service service-support" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service-image">
+                            <img src="assets/images/serv6.png" alt="Support">
+                        </div>
+                        <div class="service-text">
+                            <i class="fas fa-headset service-icon"></i>
+                            <h3>Support</h3>
+                            <p>24/7 customer support to assist you with any questions or concerns about our services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#all-services" class="btn-view-all">View All Services</a>
+        </div>
+    </section>
+    
+    <!-- Latest News Section -->
+    <section class="latest-news-section">
+        <div class="container">
+            <h2>Latest News</h2>
+            <p>Stay updated with the latest news and updates from our company.</p>
+            <div class="news-slick">
+                <div class="news-item">
+                    <img src="assets/images/car-hero3.png" alt="News 1">
+                    <div class="news-content">
+                        <h3>News Title 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="assets/images/car-hero2.png" alt="News 2">
+                    <div class="news-content">
+                        <h3>News Title 2</h3>
+                        <p>Phasellus scelerisque, lacus nec imperdiet ullamcorper, dolor augue consectetur nulla, et cursus turpis.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="assets/images/car-hero4.png" alt="News 3">
+                    <div class="news-content">
+                        <h3>News Title 3</h3>
+                        <p>Curabitur sit amet risus vel augue vehicula interdum ut ut massa. Praesent viverra turpis non lectus egestas.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="assets/images/car-hero1.png" alt="News 4">
+                    <div class="news-content">
+                        <h3>News Title 4</h3>
+                        <p>Maecenas fermentum dolor nec nulla fermentum, a vehicula lorem cursus. Morbi condimentum risus sed.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="assets/images/serv1.png" alt="News 5">
+                    <div class="news-content">
+                        <h3>News Title 5</h3>
+                        <p>Donec cursus urna et augue volutpat, et pharetra dolor congue. Aliquam erat volutpat.</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="assets/images/serv2.png" alt="News 6">
+                    <div class="news-content">
+                        <h3>News Title 6</h3>
+                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla id.</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#all-news" class="btn-view-all">View All News</a>
+        </div>
+    </section>
+    
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="comments-slider">
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="assets/images/man1.png" alt="Client 1">
+                    </div>
+                    <div class="comment-text">
+                        <p>"The service was exceptional and exceeded my expectations. Highly recommended!"</p>
+                        <h4>Jane Doe</h4>
+                        <span>CEO, Company</span>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="assets/images/man2.jpg" alt="Client 2">
+                    </div>
+                    <div class="comment-text">
+                        <p>"A fantastic experience from start to finish. Will definitely use their services again."</p>
+                        <h4>John Smith</h4>
+                        <span>Manager, Business</span>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <img src="assets/images/man3.jpg" alt="Client 3">
+                    </div>
+                    <div class="comment-text">
+                        <p>"Professional and friendly staff. Made the process so much easier. Thank you!"</p>
+                        <h4>Emily Johnson</h4>
+                        <span>Freelancer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white">
+        <div class="container py-5 text-center">
+            <!-- Footer Logo -->
+            <img src="assets/images/car-logo.png" alt="Logo" class="footer-logo img-fluid mb-4">
+            <div class="row justify-content-center">
+                <!-- Quick Links -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-inline footer-links text-center">
+                        <li class="list-inline-item"><a href="#">Home</a></li>
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="#">Services</a></li>
+                        <li class="list-inline-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Contact Us</h5>
+                    <address class="text-center">
+                        123 Street Name, City, State, 12345<br>
+                        <a href="mailto:info@mytheme.com" class="text-white">info@mytheme.com</a><br>
+                        <a href="tel:+1234567890" class="text-white">+1 234 567 890</a>
+                    </address>
+                </div>
+                <!-- Social Media Links -->
+                <div class="col-lg-4">
+                    <h5>Follow Us</h5>
+                    <ul class="list-inline footer-social text-center">
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61556511729852"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61556511729852"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61556511729852"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom text-center py-3">
+            <p class="mb-0">&copy; 2024 My Theme. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- jQuery from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- AOS 3.0.0 JS from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/scripts.js"></script>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
